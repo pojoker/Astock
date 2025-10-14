@@ -33,6 +33,16 @@ torch       : 1.10.0
 transformers: 4.7.0
 ```
 
+## Using custom data in the Factor24 notebooks
+
+If you plan to run `code/Factor24_Pretrained_ROBERT.ipynb` 或同系列的 Notebook 并替换为新的新闻语料，请参考 [docs/Factor24_custom_data.md](docs/Factor24_custom_data.md) 中的说明。该文档总结了：
+
+- Notebook 默认读取数据的位置以及如何通过一个 `DATA_DIR` 变量指向自定义目录；
+- `text_a`、`label`、`verb`、`A0`、`A1`、`verbA0A1`、`stock_factors`、`DATE` 等关键字段的格式要求；
+- 预处理阶段需要注意的缺失值过滤、类型转换与 OOD 时间切片设置。
+
+按照文档准备好 `train.csv`、`val.csv`、`test.csv` 与 `ood.csv` 后，即可直接复用 Notebook 中的掩码生成、数据加载、推理与评估流程。
+
 ## Structure of the Model
 (pretrained model can be download from https://drive.google.com/file/d/1llrxRKj0J0af5cVx4gmygYy3Z3JeAhJe/view?usp=sharing)
 <img src=figs/model_structure.jpg width=800>
