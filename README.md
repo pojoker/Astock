@@ -43,6 +43,18 @@ If you plan to run `code/Factor24_Pretrained_ROBERT.ipynb` 或同系列的 Noteb
 
 按照文档准备好 `train.csv`、`val.csv`、`test.csv` 与 `ood.csv` 后，即可直接复用 Notebook 中的掩码生成、数据加载、推理与评估流程。
 
+## Getting oriented with the notebooks
+
+如果你对“预训练语言模型”“SRL 语义角色”或“股票量化因子”只有粗浅印象，建议先阅读 [docs/sentiment_pipeline_overview.md](docs/sentiment_pipeline_overview.md)。
+该文档以概览的方式解释：
+
+- 三类信息各自解决的痛点，以及它们为何需要被组合；
+- Notebook 共享的数据准备与模型结构；
+- 常见的 Notebook 变体（是否加入因子、是否做对比学习、是否聚焦特定角色）之间的差异；
+- 如何根据需求选择最合适的 Notebook 以及训练/推理流程。
+
+阅读后，你可以更系统地理解 `code/` 目录下实验的设计逻辑，再根据兴趣深入具体实现。
+
 ## Structure of the Model
 (pretrained model can be download from https://drive.google.com/file/d/1llrxRKj0J0af5cVx4gmygYy3Z3JeAhJe/view?usp=sharing)
 <img src=figs/model_structure.jpg width=800>
